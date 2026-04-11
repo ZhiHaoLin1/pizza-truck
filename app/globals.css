@@ -56,8 +56,6 @@ body::after {
   line-height: 0.85;
   color: var(--ink);
   margin-bottom: 0.3em;
-  opacity: 0;
-  animation: rise 0.8s 0.1s ease forwards;
 }
 
 .hero-line {
