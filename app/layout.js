@@ -1,8 +1,8 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Fuoco — Neapolitan Pizza Truck',
-  description: 'Wood-fired Neapolitan pizza on wheels. Find us around town!',
+  title: 'Fuoco — Wood-Fired Neapolitan Pizza',
+  description: 'Neapolitan pizza, wood-fired on the street. Simple ingredients, proper technique.',
 }
 
 export default function RootLayout({ children }) {
