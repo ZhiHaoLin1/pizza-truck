@@ -98,14 +98,6 @@ export default function Home() {
         </ul>
       </div>
 
-      {/* ── PHOTO STRIP ── */}
-      <div className="photo-strip">
-        <div className="photo-strip-item" style={{backgroundImage: "url('https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&q=80')"}} />
-        <div className="photo-strip-item" style={{backgroundImage: "url('https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=600&q=80')"}} />
-        <div className="photo-strip-item" style={{backgroundImage: "url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80')"}} />
-        <div className="photo-strip-item" style={{backgroundImage: "url('https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&q=80')"}} />
-      </div>
-
       <div className="rule" />
 
       {/* ── ABOUT ── */}
@@ -189,13 +181,7 @@ export default function Home() {
           </li>
         </ul>
 
-        <div className="map-placeholder">
-          <div className="map-placeholder-inner">
-            <span className="map-placeholder-label">📍 Map coming soon</span>
-            <p>Follow us on Instagram for real-time location updates.</p>
-          </div>
-        </div>
-
+        {/* ── CATERING ── */}
         <div className="catering-box" id="catering">
           <h3>Private events</h3>
           <p>We bring the truck and the oven to weddings, parties, and corporate events. Tell us a bit about your event and we'll get back to you within 24 hours.</p>
