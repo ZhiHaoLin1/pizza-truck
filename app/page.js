@@ -2,16 +2,32 @@ export default function Home() {
   return (
     <>
       <section className="hero">
-        <h1 className="hero-name">Fuoco</h1>
-        <div className="hero-line" />
-        <p className="hero-desc">
-          Wood-fired Neapolitan pizza, made simply and served from our truck.
-        </p>
-        <nav className="hero-nav">
-          <a href="#menu">Menu</a>
-          <a href="#about">About</a>
-          <a href="#find">Find Us</a>
-        </nav>
+        <video
+          className="hero-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/video/hero-poster.jpg"
+        >
+          <source src="/video/hero.webm" type="video/webm" />
+          <source src="/video/hero.mp4" type="video/mp4" />
+        </video>
+
+        <div className="hero-overlay" />
+
+        <div className="hero-content">
+          <h1 className="hero-name">Fuoco</h1>
+          <div className="hero-line" />
+          <p className="hero-desc">
+            Wood-fired Neapolitan pizza, made simply and served from our truck.
+          </p>
+          <nav className="hero-nav">
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+            <a href="#find">Find Us</a>
+          </nav>
+        </div>
       </section>
 
       <div className="rule" />

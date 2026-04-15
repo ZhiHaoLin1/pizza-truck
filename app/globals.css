@@ -39,6 +39,8 @@ body::after {
 
 /* ── HERO ── */
 .hero {
+  position: relative;
+  overflow: hidden;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -48,13 +50,34 @@ body::after {
   padding: 2rem;
 }
 
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 14, 10, 0.55);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
 .hero-name {
   font-family: var(--font-serif);
   font-weight: 400;
   font-size: clamp(4.5rem, 14vw, 10rem);
   letter-spacing: -0.02em;
   line-height: 0.85;
-  color: var(--ink);
+  color: #fff;
   margin-bottom: 0.3em;
 }
 
@@ -72,7 +95,7 @@ body::after {
   font-style: italic;
   font-weight: 400;
   font-size: clamp(1.05rem, 2.2vw, 1.3rem);
-  color: var(--body);
+  color: rgba(255, 255, 255, 0.8);
   max-width: 380px;
   margin: 0 auto 2.5rem;
   opacity: 0;
@@ -93,10 +116,10 @@ body::after {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.65);
   transition: color 0.3s;
 }
-.hero-nav a:hover { color: var(--brick); }
+.hero-nav a:hover { color: #fff; }
 
 /* ── SECTIONS ── */
 .wrap {
