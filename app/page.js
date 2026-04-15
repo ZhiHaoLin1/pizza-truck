@@ -8,10 +8,9 @@ export default function Home() {
           muted
           loop
           playsInline
-          poster="/video/hero-poster.jpg"
         >
-          <source src="/video/hero.webm" type="video/webm" />
-          <source src="/video/hero.mp4" type="video/mp4" />
+          <source src="https://pub-ee840c00113243588bd244f0c5876d88.r2.dev/hero.webm" type="video/webm" />
+          <source src="https://pub-ee840c00113243588bd244f0c5876d88.r2.dev/hero.mp4" type="video/mp4" />
         </video>
 
         <div className="hero-overlay" />
