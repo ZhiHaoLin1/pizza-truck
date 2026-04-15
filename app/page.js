@@ -1,6 +1,7 @@
 export default function Home() {
   return (
     <>
+      {/* ── HERO ── */}
       <section className="hero">
         <video
           className="hero-video"
@@ -26,11 +27,15 @@ export default function Home() {
             <a href="#about">About</a>
             <a href="#find">Find Us</a>
           </nav>
+          <a href="https://instagram.com/fuocopizzatruck" className="hero-cta" target="_blank" rel="noopener noreferrer">
+            Follow for tonight's location →
+          </a>
         </div>
       </section>
 
       <div className="rule" />
 
+      {/* ── MENU ── */}
       <div className="wrap" id="menu">
         <div className="section-label">Menu</div>
         <h2 className="section-heading">What we make</h2>
@@ -91,20 +96,44 @@ export default function Home() {
         </ul>
       </div>
 
+      {/* ── PHOTO STRIP ── */}
+      <div className="photo-strip">
+        <div className="photo-strip-item" style={{backgroundImage: "url('https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&q=80')"}} />
+        <div className="photo-strip-item" style={{backgroundImage: "url('https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=600&q=80')"}} />
+        <div className="photo-strip-item" style={{backgroundImage: "url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80')"}} />
+        <div className="photo-strip-item" style={{backgroundImage: "url('https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&q=80')"}} />
+      </div>
+
       <div className="rule" />
 
+      {/* ── ABOUT ── */}
       <div className="wrap" id="about">
         <div className="section-label">About</div>
         <h2 className="section-heading">One oven, one truck</h2>
-        <p className="section-text">
-          We built a wood-fired oven, bolted it to a truck, and started making
-          pizza. We use good flour, real tomatoes, and proper fermentation. Nothing
-          fancy — just the right ingredients handled with care.
-        </p>
-        <p className="section-text">
-          Every pie is stretched by hand, topped simply, and fired fast.
-          That is the whole operation.
-        </p>
+
+        <div className="about-split">
+          <div className="about-text">
+            <p className="section-text">
+              We built a wood-fired oven, bolted it to a truck, and started making
+              pizza. We use good flour, real tomatoes, and proper fermentation. Nothing
+              fancy — just the right ingredients handled with care.
+            </p>
+            <p className="section-text">
+              Every pie is stretched by hand, topped simply, and fired fast.
+              That is the whole operation.
+            </p>
+            <blockquote className="about-quote">
+              "We wanted to make the kind of pizza you'd eat standing up in Naples —
+              blistered, a little charred, gone in four bites."
+              <cite>— Marco, founder</cite>
+            </blockquote>
+          </div>
+          <div
+            className="about-photo"
+            style={{backgroundImage: "url('https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=800&q=80')"}}
+          />
+        </div>
+
         <div className="about-grid">
           <div className="about-stat">
             <div className="about-stat-num">900°</div>
@@ -123,6 +152,7 @@ export default function Home() {
 
       <div className="rule" />
 
+      {/* ── SCHEDULE ── */}
       <div className="wrap" id="find">
         <div className="section-label">Schedule</div>
         <h2 className="section-heading">Where to find us</h2>
@@ -133,38 +163,85 @@ export default function Home() {
         <ul className="sched-list">
           <li className="sched-item">
             <span className="sched-day">Saturday</span>
-            <span className="sched-loc">Farmers Market</span>
+            <span className="sched-loc">
+              Farmers Market
+              <a className="sched-directions" href="https://maps.google.com/?q=Farmers+Market" target="_blank" rel="noopener noreferrer">Get directions ↗</a>
+            </span>
             <span className="sched-time">9am – 2pm</span>
           </li>
           <li className="sched-item">
             <span className="sched-day">Wednesday</span>
-            <span className="sched-loc">Brewery Row</span>
+            <span className="sched-loc">
+              Brewery Row
+              <a className="sched-directions" href="https://maps.google.com/?q=Brewery+Row" target="_blank" rel="noopener noreferrer">Get directions ↗</a>
+            </span>
             <span className="sched-time">5pm – 9pm</span>
           </li>
           <li className="sched-item">
             <span className="sched-day">Friday</span>
-            <span className="sched-loc">Waterfront Park</span>
+            <span className="sched-loc">
+              Waterfront Park
+              <a className="sched-directions" href="https://maps.google.com/?q=Waterfront+Park" target="_blank" rel="noopener noreferrer">Get directions ↗</a>
+            </span>
             <span className="sched-time">5pm – 10pm</span>
           </li>
         </ul>
 
-        <div className="catering-box">
+        {/* Map placeholder */}
+        <div className="map-placeholder">
+          <div className="map-placeholder-inner">
+            <span className="map-placeholder-label">📍 Map coming soon</span>
+            <p>Follow us on Instagram for real-time location updates.</p>
+          </div>
+        </div>
+
+        {/* Catering */}
+        <div className="catering-box" id="catering">
           <h3>Private events</h3>
-          <p>We bring the truck and the oven to weddings, parties, and corporate events.</p>
-          <a href="mailto:hello@fuocopizza.com" className="catering-link">Get in touch</a>
+          <p>We bring the truck and the oven to weddings, parties, and corporate events. Tell us a bit about your event and we'll get back to you within 24 hours.</p>
+
+          <form className="catering-form" onSubmit={(e) => e.preventDefault()}>
+            <div className="form-row">
+              <div className="form-group">
+                <label htmlFor="name">Name</label>
+                <input type="text" id="name" placeholder="Your name" />
+              </div>
+              <div className="form-group">
+                <label htmlFor="email">Email</label>
+                <input type="email" id="email" placeholder="your@email.com" />
+              </div>
+            </div>
+            <div className="form-row">
+              <div className="form-group">
+                <label htmlFor="date">Event date</label>
+                <input type="date" id="date" />
+              </div>
+              <div className="form-group">
+                <label htmlFor="guests">Guest count</label>
+                <input type="number" id="guests" placeholder="50" min="1" />
+              </div>
+            </div>
+            <div className="form-group">
+              <label htmlFor="message">Tell us about your event</label>
+              <textarea id="message" rows="4" placeholder="Location, occasion, any details..." />
+            </div>
+            <button type="submit" className="form-submit">Send inquiry</button>
+          </form>
         </div>
       </div>
 
       <div className="rule" />
 
+      {/* ── FOOTER ── */}
       <footer>
         <div className="footer-name">Fuoco</div>
+        <div className="footer-tagline">Wood-fired Neapolitan · Est. 2023</div>
         <div className="footer-links">
-          <a href="#">Instagram</a>
-          <a href="#">TikTok</a>
+          <a href="https://instagram.com/fuocopizzatruck" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://tiktok.com/@fuocopizzatruck" target="_blank" rel="noopener noreferrer">TikTok</a>
           <a href="mailto:hello@fuocopizza.com">Email</a>
         </div>
-        <div>© {new Date().getFullYear()} Fuoco Pizza Truck</div>
+        <div className="footer-copy">© {new Date().getFullYear()} Fuoco Pizza Truck. All rights reserved.</div>
       </footer>
     </>
   )
