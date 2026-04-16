@@ -11,6 +11,7 @@ export default function Home() {
           muted
           loop
           playsInline
+          poster="https://pub-ee840c00113243588bd244f0c5876d88.r2.dev/pizza.jpeg"
         >
           <source src="https://pub-ee840c00113243588bd244f0c5876d88.r2.dev/hero.webm" type="video/webm" />
           <source src="https://pub-ee840c00113243588bd244f0c5876d88.r2.dev/hero.mp4" type="video/mp4" />
